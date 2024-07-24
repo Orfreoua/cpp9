@@ -32,17 +32,17 @@ bool isValidValue(const std::string& value, char c, int iLine, const std::string
 	if (std::atof(value.c_str()) < 0)
 		return (Error("not a positive number", iLine, line));
 	if (value.empty() || value[0] == '.' || value.find('.') != value.rfind('.'))
-		return false;
+		return (Error("bad char", iLine, line));
 	for (size_t i = 0; i < value.length(); ++i) {
 		if (!isdigit(value[i]) && value[i] != '.')
-			return false; }
+			return (Error("bad char", iLine, line)); }
 	if (c == '|')
 	{
 		if (std::atof(value.c_str()) > 1000)
 			return (Error("too large a number", iLine, line));
 	}
 	if (!isdigit(value[0]) && ! (value[0] != '.') && (value[0] != '-'))
-		return false;
+		return (Error("bad char", iLine, line));
 	return true;
 }
 

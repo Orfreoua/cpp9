@@ -10,6 +10,7 @@
 #include <cctype>
 #include <map>
 #include <vector>
+#include <algorithm>
 
 #define RED "\033[1;31m"
 #define RESET "\033[0m"

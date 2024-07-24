@@ -1,10 +1,10 @@
-NAME =  RPN
+NAME = PmergeMe
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp\
-		RPN.cpp
+		PMergeMe.cpp
 
 OBJ_DIR = objs
 
